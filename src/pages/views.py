@@ -14,6 +14,14 @@ def contact_view(request, *args, **kwargs):
     return render(request, "contact.html", {})
 
 
+def get_pdf(request, *args, **kwargs):
+    test_file = open('/Users/bs236/Documents/Books/MasteringBitcoin2nd.pdf', 'rb')
+    response = HttpResponse(content=test_file)
+    response['Content-Type'] = 'application/pdf'
+    response['Content-Disposition'] = 'attachment; filename="%s.pdf"' % 'MasteringBitCoin2ndEdition'
+    return response
+
+
 def about_view(request, *args, **kwargs):
     my_context = {
         "title": "abc this is about us",
