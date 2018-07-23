@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'testingapp',
     'products',
     'pages',
+
 ]
 
 MIDDLEWARE = [
@@ -80,7 +82,7 @@ WSGI_APPLICATION = 'trydjango_2_0.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "trydjango_2_0",
+        "NAME": "world",
         "USER": "postgres",
         "PASSWORD": "",
         "HOST": "localhost",
